@@ -1,10 +1,19 @@
-- hosts: target
+- name:  basic configurations
+  hosts: target
   roles:
-    - timezone
-    - apt-upgrade
-    - packages
-    - dotfiles
-    - emacs
-    - cmigemo
-    - python
-    - source-highlight
+    - name: set timezone
+      role: timezone
+    - name: apt update && apt upgrade -y
+      role: apt-upgrade
+    - name: install packages
+      role: packages
+    - name: check out dotfiles
+      role: dotfiles
+    - name: install emacs
+      role: emacs
+    - name: install cmigemo
+      role: cmigemo
+    - name: install python and tools
+      role: python
+    - name: install source highlight
+      role: source-highlight
