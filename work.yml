@@ -1,0 +1,5 @@
+- name:  work configurations
+  hosts: target
+  roles:
+    - name: matplotlib
+      role: matplotlib
