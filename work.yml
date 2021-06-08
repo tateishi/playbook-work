@@ -3,3 +3,5 @@
   roles:
     - name: matplotlib
       role: matplotlib
+    - name: opencv-python
+      role: opencv-python
