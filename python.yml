@@ -1,0 +1,7 @@
+- name:  basic configurations
+  hosts: target
+  roles:
+    - name: python
+      role: python
+      vars:
+        - python_extra_version: true
