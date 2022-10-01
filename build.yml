@@ -1,0 +1,14 @@
+- hosts: target
+  tasks:
+    - name: install packages for build.
+      become: true
+      apt:
+        name:
+          - build-essential
+          - devscripts
+          - git-buildpackage
+          - quilt
+          - pbuilder
+          - debootstrap
+          - dput
+          - debhelper

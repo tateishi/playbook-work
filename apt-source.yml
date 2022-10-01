@@ -1,0 +1,8 @@
+- hosts: target
+  become: true
+  tasks:
+    - name: apt source settings.
+      replace:
+        path: /etc/apt/sources.list
+        regexp: '^# deb-src'
+        replace: 'deb-src'
