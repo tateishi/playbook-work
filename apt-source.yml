@@ -6,3 +6,6 @@
         path: /etc/apt/sources.list
         regexp: '^# deb-src'
         replace: 'deb-src'
+    - name: apt update
+      apt:
+        update_cache: true
