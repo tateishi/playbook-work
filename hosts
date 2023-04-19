@@ -1,4 +1,4 @@
 # -*- mode: yaml -*-
 target:
   hosts:
-    ws[01:11]:
+    ledger:

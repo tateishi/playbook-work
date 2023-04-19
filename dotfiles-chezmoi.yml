@@ -1,0 +1,5 @@
+- name:  basic configurations
+  hosts: target
+  roles:
+    - name: check out dotfiles
+      role: dotfiles-chezmoi
