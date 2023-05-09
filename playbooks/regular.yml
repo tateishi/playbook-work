@@ -11,5 +11,3 @@
       role: dotfiles-chezmoi
     - name: install source highlight
       role: source-highlight
-    - name: install gh
-      role: gh-cli

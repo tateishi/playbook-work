@@ -1,0 +1,5 @@
+- name:  dotfiles configurations
+  hosts: target
+  roles:
+    - name: check out dotfiles
+      role: dotfiles

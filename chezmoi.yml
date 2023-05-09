@@ -1,0 +1,7 @@
+- name:  basic configurations
+  hosts: target
+  roles:
+    - name: set timezone
+      role: timezone
+    - name: init and apply chezmoi
+      role: dotfiles-chezmoi
