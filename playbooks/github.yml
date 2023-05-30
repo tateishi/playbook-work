@@ -1,0 +1,5 @@
+- name:  basic configurations
+  hosts: target
+  roles:
+    - name: install gh
+      role: gh-cli
