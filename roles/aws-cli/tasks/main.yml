@@ -1,2 +1,25 @@
 ---
 # tasks file for aws-cli
+
+- name: install unzip
+  become: true
+  ansible.builtin.apt:
+    name: unzip
+    update_cache: true
+
+- name: download zip
+  ansible.builtin.get_url:
+    url: "{{ aws.url }}"
+    dest: "{{ aws.dest }}"
+
+
+- name: unarchive zip file
+  ansible.builtin.unarchive:
+    src: "{{ aws.zipfile }}"
+    dest: /tmp
+    remote_src: true
+
+- name: install aws cli
+  become: true
+  ansible.builtin.shell:
+    cmd: /tmp/aws/install

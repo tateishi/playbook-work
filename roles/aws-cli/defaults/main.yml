@@ -1,2 +1,6 @@
 ---
 # defaults file for aws-cli
+aws:
+  url: https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip
+  dest: /tmp
+  zipfile: /tmp/awscli-exe-linux-x86_64.zip
