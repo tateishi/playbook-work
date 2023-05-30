@@ -22,4 +22,4 @@
 - name: install aws cli
   become: true
   ansible.builtin.shell:
-    cmd: /tmp/aws/install
+    cmd: /tmp/aws/install --update
