@@ -8,7 +8,7 @@
     - name: install packages
       role: packages
     - name: check out dotfiles
-      role: dotfiles
+      role: dotfiles-chezmoi
     - name: install emacs
       role: emacs
     - name: install cmigemo
