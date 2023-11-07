@@ -1,4 +1,4 @@
 # -*- mode: yaml -*-
 target:
   hosts:
-    ansible:
+    scratch:
