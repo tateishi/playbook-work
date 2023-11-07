@@ -1,1 +1,1 @@
-- import_playbook: regular.yml
+- import_playbook: playbooks/regular.yml

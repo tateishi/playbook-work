@@ -1,0 +1,7 @@
+- name:  basic configurations
+  hosts: target
+  roles:
+    - name: install emacs
+      role: emacs
+    - name: install cmigemo
+      role: cmigemo
