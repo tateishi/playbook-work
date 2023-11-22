@@ -1,0 +1,5 @@
+- name:  nvm configurations
+  hosts: target
+  roles:
+    - name: install nvm
+      role: nvm
