@@ -1,0 +1,31 @@
+- name: install ledger
+  hosts: target
+  roles:
+    - name: install ledger
+      role: ledger
+
+- hosts: target
+  vars:
+    work_path: "~/wks/ledger"
+
+  tasks:
+    - name: make work directory
+      file:
+        path: "{{ work_path }}"
+        state: directory
+
+    - name: checkout ledger repositories
+      git:
+        repo: "{{ item.repo }}"
+        dest: "{{ item.dest }}"
+      loop:
+        - repo: http://git.tateishi/git/tadatoshi/wallet.git
+          dest: "{{ work_path }}/wallet"
+        - repo: http://git.tateishi/git/tadatoshi/ledger_kakei.git
+          dest: "{{ work_path }}/ledger_kakei"
+        - repo: http://git.tateishi/git/tadatoshi/ledger_tadatoshi.git
+          dest: "{{ work_path }}/ledger_tadatoshi"
+        - repo: http://git.tateishi/git/tadatoshi/ledger_estate.git
+          dest: "{{ work_path }}/ledger_estate"
+        - repo: http://git.tateishi/git/tadatoshi/ledger_accounts.git
+          dest: "{{ work_path }}/accounts"
