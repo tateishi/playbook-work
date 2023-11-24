@@ -19,13 +19,15 @@
         repo: "{{ item.repo }}"
         dest: "{{ item.dest }}"
       loop:
-        - repo: http://git.tateishi/git/tadatoshi/wallet.git
+        - repo: http://gitea.home/wallet/wallet.git
           dest: "{{ work_path }}/wallet"
-        - repo: http://git.tateishi/git/tadatoshi/ledger_kakei.git
+        - repo: http://gitea.home/wallet/ledger_kakei.git
           dest: "{{ work_path }}/ledger_kakei"
-        - repo: http://git.tateishi/git/tadatoshi/ledger_tadatoshi.git
+        - repo: http://gitea.home/wallet/ledger_tadatoshi.git
           dest: "{{ work_path }}/ledger_tadatoshi"
-        - repo: http://git.tateishi/git/tadatoshi/ledger_estate.git
+        - repo: http://gitea.home/wallet/ledger_hanako.git
+          dest: "{{ work_path }}/ledger_hanako"
+        - repo: http://gitea.home/wallet/ledger_estate.git
           dest: "{{ work_path }}/ledger_estate"
-        - repo: http://git.tateishi/git/tadatoshi/ledger_accounts.git
+        - repo: http://gitea.home/wallet/accounts.git
           dest: "{{ work_path }}/accounts"
