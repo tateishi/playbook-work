@@ -1,5 +1,2 @@
 - import_playbook: playbooks/regular.yml
 - import_playbook: playbooks/emacs.yml
-- import_playbook: playbooks/nvm.yml
-  vars:
-    version: "v0.39.5"
