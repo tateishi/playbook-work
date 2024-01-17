@@ -1,2 +1,3 @@
 - import_playbook: playbooks/regular.yml
 - import_playbook: playbooks/emacs.yml
+- import_playbook: playbooks/poetry.yml
