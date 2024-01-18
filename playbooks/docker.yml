@@ -1,5 +1,4 @@
 - hosts: target
-  become: true
   roles:
     - name: install docker
       role: docker
