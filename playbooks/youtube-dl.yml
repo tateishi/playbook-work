@@ -14,6 +14,8 @@
 
   vars:
     youtube_dl_packages:
+      - make
+      - ffmpeg
       - zip
       - pandoc
       - python-is-python3
