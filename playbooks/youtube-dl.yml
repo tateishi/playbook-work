@@ -1,0 +1,33 @@
+- name: extra packages
+  hosts: target
+  tasks:
+    - name: install youtube-dl related package
+      become: true
+      apt:
+        name: "{{ youtube_dl_packages }}"
+        update_cache: yes
+
+    - name: checkout youtube-dl repository
+      git:
+        repo: "{{ youtube_dl.repo }}"
+        dest: "{{ youtube_dl.dest }}"
+
+  vars:
+    youtube_dl_packages:
+      - zip
+      - pandoc
+      - python-is-python3
+    youtube_dl:
+      repo: https://github.com/ytdl-org/youtube-dl.git
+      dest: "~/wks/src/youtube-dl"
+
+
+# compile and install as follows
+
+# cd ~/wks/src/youtube-dl
+# git co build  (or "git co -b build" for the first time)
+# PREFIX=~/.local make all
+# PREFIX=~/.local make install
+# git add .
+# git commit -m "build or some note"
+# git co master
