@@ -1,0 +1,17 @@
+- hosts: target
+  roles:
+    - ansible
+
+- hosts: target
+  vars:
+    workdir: ~/wks/playbooks/staging
+  tasks:
+    - file:
+        path: "{{ workdir }}"
+        state: directory
+    - git:
+        repo: "{{ item.repo }}"
+        dest: "{{ item.dest }}"
+      loop:
+        - repo: https://github.com/tateishi/playbook-work.git
+          dest: "{{ workdir }}/playbook-work"
