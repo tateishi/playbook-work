@@ -30,3 +30,4 @@
       - isort
     executable: pip3
     extra_args: --user
+  when: ansible_distribution_release in ["bionic", "focal", "hirsute", "impish", "jammy"]

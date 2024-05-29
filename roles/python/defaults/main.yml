@@ -50,5 +50,4 @@ packages_jammy:
 packages_noble:
   - python3
   - python3-pip
-  - python3-distutils
   - python3-dev
