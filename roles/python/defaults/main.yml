@@ -51,3 +51,4 @@ packages_noble:
   - python3
   - python3-pip
   - python3-dev
+  - pipx
