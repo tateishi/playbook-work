@@ -4,7 +4,7 @@
 
 - hosts: target
   vars:
-    workdir: ~/wks/playbooks/staging
+    workdir: ~/wks/playbooks
   tasks:
     - file:
         path: "{{ workdir }}"

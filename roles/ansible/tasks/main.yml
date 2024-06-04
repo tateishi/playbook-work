@@ -1,0 +1,14 @@
+- name: ansibleインストール
+  community.general.pipx:
+    install_deps: true
+    name: ansible
+
+- name: ansible role directory
+  ansible.builtin.file:
+    path: ~/.local/lib/ansible
+    state: directory
+
+- name: checkout roles
+  ansible.builtin.git:
+    repo: https://github.com/tateishi/ansible-roles.git
+    dest: ~/.local/lib/ansible/roles
