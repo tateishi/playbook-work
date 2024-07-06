@@ -1,0 +1,51 @@
+---
+# tasks file for bind-secondary
+- name: install bind
+  become: true
+  apt: 
+    name:
+      - bind9
+    update_cache: true
+
+- name: start bind
+  become: true
+  service:
+    name: bind9
+    state: started
+    enabled: true
+
+- name: make directory for secondary
+  become: true
+  file:
+    path: "{{ dns.dump.path }}"
+    state: directory
+    owner: "{{ dns.dump.owner }}"
+    group: "{{ dns.dump.group }}"
+    mode: "{{ dns.dump.mode }}"
+
+- name: make directory for log
+  become: true
+  file:
+    path: "{{ dns.log.path }}"
+    state: directory
+    owner: "{{ dns.log.owner }}"
+    group: "{{ dns.log.group }}"
+    mode: "{{ dns.log.mode }}"
+
+- name: copy named.conf.options
+  become: true
+  template:
+    src: named.conf.options.j2
+    dest: "{{ dns.config_dir }}/named.conf.options"
+    owner: root
+    group: bind
+  notify: reload bind
+
+- name: copy named.conf.local
+  become: true
+  template:
+    src: named.conf.local.j2
+    dest: "{{ dns.config_dir }}/named.conf.local"
+    owner: root
+    group: bind
+  notify: reload bind
