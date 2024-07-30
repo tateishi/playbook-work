@@ -1,0 +1,5 @@
+- name: install gitea
+  hosts: target
+  roles:
+    - name: install gitea
+      role: gitea
