@@ -1,0 +1,4 @@
+- hosts: target
+  roles:
+    - name: install cert for private registries
+      role: docker-registry
