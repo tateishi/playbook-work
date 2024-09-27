@@ -5,3 +5,5 @@
       role: python
       vars:
         - python_extra_version: true
+    - name: rye
+      role: rye
