@@ -1,4 +1,4 @@
 # -*- mode: yaml -*-
 target:
   hosts:
-    ws01:
+    scratch:
