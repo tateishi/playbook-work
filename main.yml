@@ -1,2 +1,1 @@
 - import_playbook: playbooks/regular.yml
-- import_playbook: playbooks/python.yml
