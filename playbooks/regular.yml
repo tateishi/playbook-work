@@ -5,6 +5,8 @@
       role: timezone
     - name: apt update && apt upgrade -y
       role: apt-upgrade
+    - name: install authorized_keys
+      role: authorized_key
     - name: install packages
       role: packages
     - name: check out dotfiles
