@@ -1,5 +1,5 @@
- name: uv
+- name: uv
   shell: >
-    curl -sSf {{ url }} | sh
+    curl -LsSf {{ url }} | sh
   args:
     creates: "{{ ansible_env.HOME }}/.uv"
